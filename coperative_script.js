@@ -19,7 +19,7 @@ function tora() {
     let advisor = document.getElementById("advisor").value;
     
 
-    let ubutumwa = `Wahisemo:
+    let ubutumwa = `You choose:
     - President: ${president}
     - Vice President: ${vp}
     - Accountable: ${accountable}
