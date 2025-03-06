@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - E-Voting</title>
+    <link rel="stylesheet" href="menu_bar.css">
+</head>
+<body>
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Service.html">Service</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <div class="form-box">
+            <h1 style="color: blue;"><ins>Contact Us</ins></h1>
+            <p>If you have any questions or need more information, feel free to reach out to us. We are here to help you with your voting needs.</p>
+            <h2>Our Contact Information</h2>
+            <ul>
+                <li><strong>Email:</strong><a href="http//:benjaminbsv60@gmail.com">benjaminbsv15@gmail.com</a></li>
+                <li><strong>Phone:</strong> +250 792 101 936</li>
+                <li><strong>Address:</strong>E-Voting Street, Rugabano, Karongi, Rwanda</li>
+            </ul>
+
+            <h2>Send Us a Message</h2>
+            <form action="send_message.php" method="POST">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Your Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

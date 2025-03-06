@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote as a Student</title>
+  <link rel="stylesheet" href="choose std.css">
+
+  <style>
+    table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px auto;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    img {
+        width: 80px;
+        height: 80px;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+ 
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #333;
+        padding: 15px 20px;
+    }
+
+    .nav-list {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0 10px;
+    }
+
+    .nav-list a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .bar {
+        background: white;
+        height: 4px;
+        width: 25px;
+        margin: 3px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        .menu-toggle {
+            display: flex;
+        }
+
+        .nav-list {
+            display: none;
+            flex-direction: column;
+            background: #333;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            text-align: center;
+        }
+
+        .nav-list.active {
+            display: flex;
+        }
+
+        .nav-list li {
+            margin: 10px 0;
+        }
+    }
+
+</style>
+
+  <style>
+    .candidate-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .candidate-container {
+      position: relative;
+      width: 22%;
+      margin-bottom: 10px;
+    }
+
+    .candidate-container img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .candidate-container input[type="radio"] {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid white;
+      border-radius: 5px;
+      color: white;
+    }
+
+    .candidate-info {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body style="color: white; font-family: Arial, Helvetica, sans-serif;">
+
+  <nav class="navbar">
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Service.html">Services</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+  <div class="container">
+    <!-- Left Section -->
+    <div class="section" id="left-section">
+      <select id="candidateDropdownLeft" onchange="updateCandidateImagesLeft()">
+        <option value="candidate1">Headboy</option>
+        <option value="candidate2">Vice Headboy</option>
+        <option value="candidate3">Refectorian</option>
+        <option value="candidate4">Chief of Hygiene</option>
+      </select>
+
+      <div class="candidate-images">
+        <div class="candidate-container">
+          <img id="candidateImage1Left" src="student1.jpg" alt="Candidate 1">
+          <input type="radio" name="leftCandidate" id="candidate1Left" onchange="updateCandidateInfo('candidate1Left', 'Information about Headboy')" />
+        </div>
+        <div class="candidate-container">
+          <img id="candidateImage2Left" src="student2.jpg" alt="Candidate 2">
+          <input type="radio" name="leftCandidate" id="candidate2Left" onchange="updateCandidateInfo('candidate2Left', 'Information about Vice Headboy')" />
+        </div>
+        <div class="candidate-container">
+          <img id="candidateImage3Left" src="student3.jpg" alt="Candidate 3">
+          <input type="radio" name="leftCandidate" id="candidate3Left" onchange="updateCandidateInfo('candidate3Left', 'Information about Refectorian')" />
+        </div>
+        <div class="candidate-container">
+          <img id="candidateImage4Left" src="student4.jpg" alt="Candidate 4">
+          <input type="radio" name="leftCandidate" id="candidate4Left" onchange="updateCandidateInfo('candidate4Left', 'Information about Chief of Hygiene')" />
+        </div>
+      </div>
+      <button onclick="nextDropdown('left')" style="background-color: blue;
+       border: 1px solid blue;
+      width: 16%;
+      color: white;
+      padding: 1.5%;
+      border-radius: 4%;
+      cursor: pointer;">Vote</button>
+      <div id="candidateInfoLeft" class="candidate-info">
+        <p>Candidate Information will appear here</p>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="section" id="right-section">
+      <select id="candidateDropdownRight" onchange="updateCandidateImagesRight()">
+        <option value="candidate1">Headgirl</option>
+        <option value="candidate2">Vice Headgirl</option>
+        <option value="candidate3">Refectorienne</option>
+        <option value="candidate4">Chief of Hygiene</option>
+      </select>
+
+      <div class="candidate-images">
+        <div class="candidate-container">
+          <img id="candidateImage1Right" src="student5.jpg" alt="Candidate 1">
+          <input type="radio" name="rightCandidate" id="candidate1Right" onchange="updateCandidateInfo('candidate1Right', 'Information about Headgirl')" />
+        </div>
+        <div class="candidate-container">
+          <img id="candidateImage2Right" src="student6.jpg" alt="Candidate 2">
+          <input type="radio" name="rightCandidate" id="candidate2Right" onchange="updateCandidateInfo('candidate2Right', 'Information about Vice Headgirl')" />
+        </div>
+        <div class="candidate-container">
+          <img id="candidateImage3Right" src="student7.jpg" alt="Candidate 3">
+          <input type="radio" name="rightCandidate" id="candidate3Right" onchange="updateCandidateInfo('candidate3Right', 'Information about Refectorienne')" />
+        </div>
+        <div class="candidate-container">
+          <img id="candidateImage4Right" src="student8.jpg" alt="Candidate 4">
+          <input type="radio" name="rightCandidate" id="candidate4Right" onchange="updateCandidateInfo('candidate4Right', 'Information about Chief of Hygiene')" />
+        </div>
+      </div>
+      <button onclick="nextDropdown('right')" style="background-color: blue;
+      border: 1px solid blue;
+      width: 16%;
+      color: white;
+      padding: 1.5%;
+      border-radius: 4%;
+      cursor: pointer;">Vote</button>
+      <div id="candidateInfoRight" class="candidate-info">
+        <p>Candidate Information will appear here</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // To keep track of previously selected candidates
+    let selectedLeftCandidates = [];
+    let selectedRightCandidates = [];
+
+    // Function to update images for the left section
+    function updateCandidateImagesLeft() {
+      var selectedCandidateLeft = document.getElementById("candidateDropdownLeft").value;
+
+      if (selectedLeftCandidates.includes(selectedCandidateLeft)) {
+        alert("You've already finished to vot on this category!");
+        return; // Prevent selecting the same category again
+      }
+
+      selectedLeftCandidates.push(selectedCandidateLeft); // Add to the selected list
+
+      if (selectedCandidateLeft === "candidate1") {
+        document.getElementById("candidateImage1Left").src = "./photos/student1.jpg";
+        document.getElementById("candidateImage2Left").src = "./photos/student2.jpg";
+        document.getElementById("candidateImage3Left").src = "./photos/student3.jpg";
+        document.getElementById("candidateImage4Left").src = "./photos/student4.jpg";
+        document.getElementById("candidateInfoLeft").innerHTML = "<p>Information about Headboy</p>";
+      } else if (selectedCandidateLeft === "candidate2") {
+        document.getElementById("candidateImage1Left").src = "./photos/student9.jpg";
+        document.getElementById("candidateImage2Left").src = "./photos/student10.jpg";
+        document.getElementById("candidateImage3Left").src = "./photos/student11.jpg";
+        document.getElementById("candidateImage4Left").src = "./photos/student12.jpg";
+        document.getElementById("candidateInfoLeft").innerHTML = "<p>Information about Vice Headboy</p>";
+      } else if (selectedCandidateLeft === "candidate3") {
+        document.getElementById("candidateImage1Left").src = "./photos/student13.jpg";
+        document.getElementById("candidateImage2Left").src = "./photos/student14.jpg";
+        document.getElementById("candidateImage3Left").src = "./photos/student15.jpg";
+        document.getElementById("candidateImage4Left").src = "./photos/student16.jpg";
+        document.getElementById("candidateInfoLeft").innerHTML = "<p>Information about Refectorian</p>";
+      } else if (selectedCandidateLeft === "candidate4") {
+        document.getElementById("candidateImage1Left").src = "./photos/student17.jpg";
+        document.getElementById("candidateImage2Left").src = "./photos/student18.jpg";
+        document.getElementById("candidateImage3Left").src = "./photos/student19.jpg";
+        document.getElementById("candidateImage4Left").src = "./photos/student20.jpg";
+        document.getElementById("candidateInfoLeft").innerHTML = "<p>Information about Chief of Hygiene</p>";
+      }
+    }
+
+    // Function to update images for the right section
+    function updateCandidateImagesRight() {
+      var selectedCandidateRight = document.getElementById("candidateDropdownRight").value;
+
+      if (selectedRightCandidates.includes(selectedCandidateRight)) {
+        alert("You've already selected this category!");
+        return; // Prevent selecting the same category again
+      }
+
+      selectedRightCandidates.push(selectedCandidateRight); // Add to the selected list
+
+      if (selectedCandidateRight === "candidate1") {
+        document.getElementById("candidateImage1Right").src = "./photos/hdb1.jpg";
+        document.getElementById("candidateImage2Right").src = "./photos/hdb2.jpg";
+        document.getElementById("candidateImage3Right").src = "./photos/hdb3.jpg";
+        document.getElementById("candidateImage4Right").src = "./photos/hdb4.jpg";
+        document.getElementById("candidateInfoRight").innerHTML = "<p>Information about Headgirl</p>";
+      } else if (selectedCandidateRight === "candidate2") {
+        document.getElementById("candidateImage1Right").src = "./photos/vchdb1.jpg";
+        document.getElementById("candidateImage2Right").src = "./photos/vchdb2.jpg";
+        document.getElementById("candidateImage3Right").src = "./photos/vchdb3.jpg";
+        document.getElementById("candidateImage4Right").src = "./photos/vchdb4.jpg";
+        document.getElementById("candidateInfoRight").innerHTML = "<p>Information about Vice Headgirl</p>";
+      } else if (selectedCandidateRight === "candidate3") {
+        document.getElementById("candidateImage1Right").src = "./photos/student5.jpg";
+        document.getElementById("candidateImage2Right").src = "./photos/student6.jpg";
+        document.getElementById("candidateImage3Right").src = "./photos/student7.jpg";
+        document.getElementById("candidateImage4Right").src = "./photos/student8.jpg";
+        document.getElementById("candidateInfoRight").innerHTML = "<p>Information about Refectorienne</p>";
+      } else if (selectedCandidateRight === "candidate4") {
+        document.getElementById("candidateImage1Right").src = "./photos/hygiene1.jpg";
+        document.getElementById("candidateImage2Right").src = "./photos/hygiene2.jpg";
+        document.getElementById("candidateImage3Right").src = "./photos/hygiene3.jpg";
+        document.getElementById("candidateImage4Right").src = "./photos/hygiene4.jpg";
+        document.getElementById("candidateInfoRight").innerHTML = "<p>Information about Chief of Hygiene</p>";
+      }
+    }
+
+    // Function to go to the next combobox
+    function nextDropdown(section) {
+      if (section === 'left') {
+        document.getElementById("candidateDropdownLeft").selectedIndex++;
+        updateCandidateImagesLeft();
+      } else if (section === 'right') {
+        document.getElementById("candidateDropdownRight").selectedIndex++;
+        updateCandidateImagesRight();
+      }
+    }
+  </script>
+</body>
+</html>

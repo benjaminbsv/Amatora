@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coperative's Election</title>
+    <link rel="stylesheet" href="../FRONTEND/css/copererative1.css">
+</head>
+<style>
+    table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px auto;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    img {
+        width: 80px;
+        height: 80px;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f4f4f4;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #333;
+        padding: 15px 20px;
+    }
+
+    .nav-list {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0 10px;
+    }
+
+    .nav-list a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .bar {
+        background: white;
+        height: 4px;
+        width: 25px;
+        margin: 3px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        .menu-toggle {
+            display: flex;
+        }
+
+        .nav-list {
+            display: none;
+            flex-direction: column;
+            background: #333;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            text-align: center;
+        }
+
+        .nav-list.active {
+            display: flex;
+        }
+
+        .nav-list li {
+            margin: 10px 0;
+        }
+    }
+
+</style>
+
+
+<body style="background-color: rgb(19, 19, 112);">
+
+    <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Service.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+<br><br><br>
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+    
+    <div class="container">
+        <h2>ENTER YOUR NAMES</h2><br>
+        <input type="text" id="izina" placeholder="Write your names here">
+        <br><br>
+    <button onclick="genzuraIzina()">Log In</button>
+
+
+        <div id="gutora" style="display: none;">
+            <h1 style="color: blue;">Choose who you vote</h1>
+            <form id="formGutora">
+                <h2>   <label>President:</label></h2>
+                <select id="president">
+                    <option value="Candidate 1">Candidate 1</option>
+                    <option value="Candidate 2">Candidate 2</option>
+                    <option value="Candidate 3">Candidate 3</option>
+                </select>
+                <br></h3>
+               <h2> <label>Vice President:</label></h2>
+                <select id="vp">
+                    <option value="Candidate 1">Candidate 1</option>
+                    <option value="Candidate 2">Candidate 2</option>
+                    <option value="Candidate 3">Candidate 3</option>
+                </select>
+                <br>
+                <h2> <label>Accountant:</label></h2>
+                <select id="accountable">
+                    <option value="Candidate 1">Candidate 1</option>
+                    <option value="Candidate 2">Candidate 2</option>
+                    <option value="Candidate 3">Candidate 3</option>
+                </select>
+                <br>
+                <h2>  <label>Secretary:</label></h2>
+                <select id="secretary">
+                    <option value="Candidate 1">Candidate 1</option>
+                    <option value="Candidate 2">Candidate 2</option>
+                    <option value="Candidate 3">Candidate 3</option>
+                </select>
+                <br>
+                <h2>   <label>Advisor:</label></h2>
+                <select id="advisor">
+                    <option value="Candidate 1">Candidate 1</option>
+                    <option value="Candidate 2">Candidate 2</option>
+                    <option value="Candidate 3">Candidate 3</option>
+                </select>
+                <br>
+                <button type="button" onclick="tora()">VOTE</button>
+            </form>
+        </div>
+        <div id="ubutumwa" style="display: none;"></div>
+    </div>
+    <script src="./coperative_script.js"></script>
+</body>
+</html>

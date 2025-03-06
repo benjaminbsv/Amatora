@@ -1,0 +1,54 @@
+/* Basic Layout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+  padding: 20px;
+}
+
+.section {
+  width: 48%;
+}
+
+/* Style for the ComboBox */
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Style for the Candidate Images */
+.candidate-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.candidate-images img {
+  max-width: 150px;
+  height: auto;
+  margin: 0 5px;
+}
+
+/* Style for Candidate Info */
+.candidate-info {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background-color: #837f9c;
+
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  border-left: 2px solid #000000; 
+  border-right: 2px solid #000000;
+}
+
+
+body {
+  background-color: #282446;
+  
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Platform</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 80px;
+            height: 80px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            padding: 15px 20px;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-list li {
+            margin: 0 10px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            background: white;
+            height: 4px;
+            width: 25px;
+            margin: 3px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                background: #333;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                text-align: center;
+            }
+
+            .nav-list.active {
+                display: flex;
+            }
+
+            .nav-list li {
+                margin: 10px 0;
+            }
+        }
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="color: #ffffff; font-size: 20px;">
+    <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Service.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="left">
+            <form>
+                <br><br><br><br><br><br>
+                <h2 id="lang-selection">Select language</h2>
+                <br><br><br>
+                <label><input type="radio" name="language" value="English">English</label><br/>
+                <label><input type="radio" name="language" value="Kinyarwanda">Kinyarwanda</label><br/>
+                <br><br>
+                <h2 id="election-type">Choose the type of Election:</h2>
+            </form>
+        </div>
+
+        <div class="button-container">
+            <a href="Coperative.html">
+                <button class="btn btn-primary">Business/Co_operative</button>
+            </a>
+            <a href="Teacher & Student Logins.html">
+                <button class="btn btn-secondary">School</button>
+            </a>
+            <a href="Pre_ID Entry.html">
+                <button class="btn btn-tertiary">Presidential</button>
+            </a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

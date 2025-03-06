@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter your National ID</title>
+    <link rel="stylesheet" href="style2.css">
+    <script>
+        function validateID() {
+            let idInput = document.getElementById("ID").value;
+
+            // Genzura niba ID ifite imibare 16 gusa
+            if (idInput.length !== 16) {
+                alert("Your National ID must be exactly 16 digits.");
+                return false; 
+            }
+            return true; // Nibiba 16, biremewe
+        }
+
+        function showAlert() {
+            if (validateID()) {
+                if (confirm("Do you want to go to the next page?")) {
+                    // Gusiba ID nyuma yo gukanda Continue
+                    document.getElementById("ID").value = ""; // Isiba ID
+                    window.location.href = "National Voting Area.html"; // Kwerekeza ku rupapuro rukurikira
+                } else {
+                    alert("You chose to stay on this page.");
+                }
+            }
+        }
+    </script>  
+</head>
+
+
+
+<body>
+    
+    <div class="container">
+        <div class="form-box">
+            <h1>Enter Your National ID</h1>
+            <label for="ID">National ID (16 digits):</label>
+            <input type="number" id="ID" placeholder="Enter your ID here">
+            <button onclick="showAlert()">Continue</button>
+        </div>
+    </div>
+</body>
+</html>

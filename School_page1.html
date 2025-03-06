@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <title>Enter your National ID</title>
+    <script>
+        function showAlert() {
+            if (confirm("Do you want to go to the next page?")) {
+                window.location.href = "page3.html"
+            } else {
+                alert("You chose to stay on this page.");
+            }
+        }
+    </script>  
+   
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Election Process</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            padding: 15px 20px;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-list li {
+            margin: 0 10px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            background: white;
+            height: 4px;
+            width: 25px;
+            margin: 3px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                background: #333;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                text-align: center;
+            }
+
+            .nav-list.active {
+                display: flex;
+            }
+
+            .nav-list li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: #8787af;">
+    <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Service.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+   
+    
+    <div class="container">
+    <div class="left">
+        <form>
+            <br><br><br>
+            <h1>Please provide your School identification
+                <br> number (Student ID)</h1>
+            <div>
+                <br><br><br>
+               <h3><label for="ID:" size="100">ID:</label></h3> 
+          <input type="number"id="ID" min="1" max="99" placeholder="Enter your Student ID here"   >
+            </div>
+            <br><br><br><br>
+        
+    </div>
+    <div class="right">
+        <img src="Screenshot (3).png">
+    </div>
+</div> 
+
+
+<a href="School_page2.html" class="btn">Continue</a>
+
+
+</body>
+</html>
+

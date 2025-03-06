@@ -1,0 +1,157 @@
+body {
+    width: 100%;
+    margin:-1;
+}
+
+
+
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin-left: -25cm;
+    margin-top: 8cm;
+   
+  
+}
+
+    
+
+.container {
+    display: flex;
+    flex-direction: column; /* Bituma byose bikurikirana hejuru-hasi */
+    align-items: center;  /* Bituma byose biba hagati horizontally */
+    gap: 10px; /* Intera hagati y’ibintu */
+}
+
+.continue-btn {
+    margin-top: 15px; /* Bituma button igira intera iri hagati yayo na radio buttons */
+}
+
+.container {
+    display: flex;
+    background-image: url('./online_voting.png');
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    filter: brightness(100%);
+    height: 100%;
+}
+
+
+.form {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8); 
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+form {
+    z-index: 2;
+}
+reft form {
+    color : white ;
+    z-index: 1;
+}
+
+
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin-left: -53.5cm;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Styles for each button */
+.btn-primary {
+
+    
+    width: 18%;
+    background-color: rgb(255, 255, 255);
+    padding: 2%;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    z-index: 1000;
+    display: block; 
+    margin-top: 15px; 
+    padding: 12px 20px;
+    width: 10%;
+
+    margin-left: 10cm;
+    margin-bottom: -2.9cm;
+background-color: black;
+color: white;
+width: 10%;
+padding: 0.9%;
+font-size: 18px;
+}
+
+.btn-secondary {
+
+    width: 18%;
+    background-color: rgb(255, 255, 255);
+    padding: 2%;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    z-index: 1000;
+    display: block; 
+    margin-top: 15px; 
+    padding: 12px 20px;
+    width: 10%;
+
+    margin-left: 15cm;
+    margin-bottom: -2.9cm;
+background-color: black;
+color: white;
+width: 10%;
+padding: 0.9%;
+font-size: 18px;
+}
+.btn-tertiary {
+    width: 18%;
+    background-color: rgb(255, 255, 255);
+    padding: 2%;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    z-index: 1000;
+    display: block; 
+    margin-top: 15px; 
+    padding: 12px 20px;
+    width: 10%;
+
+    margin-left: 20cm;
+    margin-bottom: -2.9cm;
+background-color: black;
+color: white;
+width: 10%;
+padding: 0.9%;
+font-size: 18px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}

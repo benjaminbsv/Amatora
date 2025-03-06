@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter your ID</title>
+    <link rel="stylesheet" href="styels.css">
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 80px;
+            height: 80px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+    
+        body {
+            background: #f4f4f4;
+        }
+    
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            padding: 15px 20px;
+        }
+    
+        .nav-list {
+            list-style: none;
+            display: flex;
+        }
+    
+        .nav-list li {
+            margin: 0 10px;
+        }
+    
+        .nav-list a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+    
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+    
+        .bar {
+            background: white;
+            height: 4px;
+            width: 25px;
+            margin: 3px 0;
+        }
+    
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+    
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                background: #333;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                text-align: center;
+            }
+    
+            .nav-list.active {
+                display: flex;
+            }
+    
+            .nav-list li {
+                margin: 10px 0;
+            }
+        }
+    
+    </style>
+    <style>
+        body {
+            background-color: #113257;
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat;
+            margin: 0.5%;
+        }
+        #provence {
+            background-color: #f0f0f0; 
+            color: #333; 
+            padding: 10px;
+            border: 1px solid #ccc; 
+            border-radius: 5px;
+            font-size: 16px;
+            
+        }
+        
+
+    </style>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+
+    <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="../webpages/index.html">Home</a></li>
+            <li><a href="../webpages/About.html">About</a></li>
+            <li><a href="../webpages/Service.html">Services</a></li>
+            <li><a href="../webpages/Contact.html">Contact</a></li>
+        </ul>
+    </nav><br><br>    
+    <h1 style="color: greenyellow;" ><ins>LOGIN as a Teacher </ins></h1>
+    <background-image></background-image>
+<br><br>
+<div class="container" style="display: flex;" >
+    <div class="left" style="flex: 2;">
+        <div>
+    <label for="provence" style="color: white;">PROVENCE:</label>
+    <br>
+    <input type="text"  id="provence" placeholder="Enter your provence" style="color: black;">
+</div><br><br>
+<div>
+    <label for="DISTRICT" style="color: white;">DISTRICT:</label>
+    <br>
+    <input type="text"  id="provence" placeholder="Enter your district">
+</div><br><br>
+<div>
+    <label for="SCHOOL" style="color: white;">SCHOOL:</label>
+    <br>
+    <input type="text"  id="provence" placeholder="Enter your school" >
+</div>
+    </div><br>
+    <div class="right" style="flex: 2;">
+        <div>
+            <label for="teacher id"  style="color: white;">TEACHER ID
+            :</label>
+            <br>
+            <input type="text"  id="provence" placeholder="Enter your teacher ID">
+        </div>
+        <br><br><br>
+<div>
+    <div class=" button">
+        <a href="Candidates Selection to Vote.html">
+        <button style="background-color: #077bff; color: white;width:20%;
+    padding: 10px;border: #077bff;border-radius: 6px;cursor: pointer;">Submit</button>
+    </a>
+        </div>
+   
+   </div>
+    </div>
+</div>
+</body>
+</html>
