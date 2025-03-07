@@ -52,3 +52,48 @@ body {
   background-color: #282446;
   
 }
+
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .section {
+        flex: 1 1 100%; /* Full width on mobile */
+        min-width: auto;
+    }
+
+    .candidate-container {
+        width: 48%; /* Adjust width for mobile */
+    }
+
+    button {
+        width: 100%; /* Button takes full width */
+    }
+}
